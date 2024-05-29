@@ -25,7 +25,7 @@ resource "aws_security_group" "allow_tls" {
 
     tags = merge(
         var.common_tags,
-        var.sg_tags
+        var.sg_tags,
         {
             Name = local.sg_name_final
         }
