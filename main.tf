@@ -17,7 +17,7 @@ resource "aws_security_group" "allow_tls" {
         for_each = var.outbond_rules
         content {
             from_port = egress.value["from_port"]
-            to_port = egress.vaule["to_port"]
+            to_port = egress.value["to_port"]
             protocol = egress.value["protocol"]
             cidr_blocks = egress.value["cidr_blocks"]
         }
